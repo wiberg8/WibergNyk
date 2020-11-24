@@ -20,6 +20,7 @@ namespace WibergNyk
             txtDb.Text = Properties.Settings.Default.DatabasePath;
             txtPdf.Text = Properties.Settings.Default.PdfSaveLocation;
             txtVerksamhet.Text = Properties.Settings.Default.Verksamhet;
+            txtSkapMapp.Text = Properties.Settings.Default.SkapMapp;
             cbBackupOnStart.Checked = Properties.Settings.Default.BackupOnStart;
         }
 
@@ -63,6 +64,17 @@ namespace WibergNyk
             }
         }
 
+        private void cmdSkapMappBrowse_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderDialog = new FolderBrowserDialog();
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                Properties.Settings.Default.SkapMapp = folderDialog.SelectedPath;
+                txtSkapMapp.Text = Properties.Settings.Default.SkapMapp;
+                Properties.Settings.Default.Save();
+            }
+        }
+
         private void cmdPdfClear_Click(object sender, EventArgs e)
         {
             txtPdf.Text = string.Empty;
@@ -88,6 +100,13 @@ namespace WibergNyk
         private void cbBackupOnStart_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.BackupOnStart = cbBackupOnStart.Checked;
+            Properties.Settings.Default.Save();
+        }
+
+        private void cmdSkapMappClear_Click(object sender, EventArgs e)
+        {
+            txtSkapMapp.Text = string.Empty;
+            Properties.Settings.Default.SkapMapp = string.Empty;
             Properties.Settings.Default.Save();
         }
     }

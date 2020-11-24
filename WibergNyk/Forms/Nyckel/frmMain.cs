@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WibergNykLibary;
+using WibergNyk.Forms.Skap;
 
 namespace WibergNyk
 {
@@ -321,6 +322,12 @@ namespace WibergNyk
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tspSkapHantering_Click(object sender, EventArgs e)
+        {
+            var x = new SkapHanteringDialog();
+            x.ShowDialog();
         }
     }
 }

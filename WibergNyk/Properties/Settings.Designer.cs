@@ -82,5 +82,17 @@ namespace WibergNyk.Properties {
                 this["BackupOnStart"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SkapMapp {
+            get {
+                return ((string)(this["SkapMapp"]));
+            }
+            set {
+                this["SkapMapp"] = value;
+            }
+        }
     }
 }

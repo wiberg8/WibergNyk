@@ -47,6 +47,10 @@
             this.txtVerksamhet = new System.Windows.Forms.TextBox();
             this.cmdCancel = new System.Windows.Forms.Button();
             this.cbBackupOnStart = new System.Windows.Forms.CheckBox();
+            this.cmdSkapMappClear = new System.Windows.Forms.Button();
+            this.laSkapMapp = new System.Windows.Forms.Label();
+            this.cmdSkapMappBrowse = new System.Windows.Forms.Button();
+            this.txtSkapMapp = new System.Windows.Forms.TextBox();
             this.gbLocations.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +66,10 @@
             // 
             // gbLocations
             // 
+            this.gbLocations.Controls.Add(this.cmdSkapMappClear);
+            this.gbLocations.Controls.Add(this.laSkapMapp);
+            this.gbLocations.Controls.Add(this.cmdSkapMappBrowse);
+            this.gbLocations.Controls.Add(this.txtSkapMapp);
             this.gbLocations.Controls.Add(this.cmdDbClear);
             this.gbLocations.Controls.Add(this.cmdBackupClear);
             this.gbLocations.Controls.Add(this.cmdPdfClear);
@@ -76,7 +84,7 @@
             this.gbLocations.Controls.Add(this.txtPdf);
             this.gbLocations.Location = new System.Drawing.Point(46, 64);
             this.gbLocations.Name = "gbLocations";
-            this.gbLocations.Size = new System.Drawing.Size(628, 166);
+            this.gbLocations.Size = new System.Drawing.Size(628, 194);
             this.gbLocations.TabIndex = 42;
             this.gbLocations.TabStop = false;
             this.gbLocations.Text = "Sökvägar";
@@ -204,7 +212,7 @@
             // laVerksamhet
             // 
             this.laVerksamhet.AutoSize = true;
-            this.laVerksamhet.Location = new System.Drawing.Point(62, 238);
+            this.laVerksamhet.Location = new System.Drawing.Point(62, 271);
             this.laVerksamhet.Name = "laVerksamhet";
             this.laVerksamhet.Size = new System.Drawing.Size(66, 13);
             this.laVerksamhet.TabIndex = 54;
@@ -212,7 +220,7 @@
             // 
             // cmdVerksamhetSave
             // 
-            this.cmdVerksamhetSave.Location = new System.Drawing.Point(259, 252);
+            this.cmdVerksamhetSave.Location = new System.Drawing.Point(259, 285);
             this.cmdVerksamhetSave.Name = "cmdVerksamhetSave";
             this.cmdVerksamhetSave.Size = new System.Drawing.Size(107, 25);
             this.cmdVerksamhetSave.TabIndex = 52;
@@ -223,7 +231,7 @@
             // txtVerksamhet
             // 
             this.txtVerksamhet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtVerksamhet.Location = new System.Drawing.Point(65, 254);
+            this.txtVerksamhet.Location = new System.Drawing.Point(65, 287);
             this.txtVerksamhet.Name = "txtVerksamhet";
             this.txtVerksamhet.Size = new System.Drawing.Size(188, 20);
             this.txtVerksamhet.TabIndex = 53;
@@ -233,7 +241,7 @@
             // cmdCancel
             // 
             this.cmdCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cmdCancel.Location = new System.Drawing.Point(567, 254);
+            this.cmdCancel.Location = new System.Drawing.Point(567, 287);
             this.cmdCancel.Name = "cmdCancel";
             this.cmdCancel.Size = new System.Drawing.Size(107, 25);
             this.cmdCancel.TabIndex = 55;
@@ -251,11 +259,51 @@
             this.cbBackupOnStart.UseVisualStyleBackColor = true;
             this.cbBackupOnStart.CheckedChanged += new System.EventHandler(this.cbBackupOnStart_CheckedChanged);
             // 
+            // cmdSkapMappClear
+            // 
+            this.cmdSkapMappClear.Location = new System.Drawing.Point(515, 160);
+            this.cmdSkapMappClear.Name = "cmdSkapMappClear";
+            this.cmdSkapMappClear.Size = new System.Drawing.Size(107, 25);
+            this.cmdSkapMappClear.TabIndex = 58;
+            this.cmdSkapMappClear.Text = "Återställ";
+            this.cmdSkapMappClear.UseVisualStyleBackColor = true;
+            this.cmdSkapMappClear.Click += new System.EventHandler(this.cmdSkapMappClear_Click);
+            // 
+            // laSkapMapp
+            // 
+            this.laSkapMapp.AutoSize = true;
+            this.laSkapMapp.Location = new System.Drawing.Point(16, 147);
+            this.laSkapMapp.Name = "laSkapMapp";
+            this.laSkapMapp.Size = new System.Drawing.Size(108, 13);
+            this.laSkapMapp.TabIndex = 57;
+            this.laSkapMapp.Text = "Skåphantering mapp:";
+            // 
+            // cmdSkapMappBrowse
+            // 
+            this.cmdSkapMappBrowse.Location = new System.Drawing.Point(402, 160);
+            this.cmdSkapMappBrowse.Name = "cmdSkapMappBrowse";
+            this.cmdSkapMappBrowse.Size = new System.Drawing.Size(107, 25);
+            this.cmdSkapMappBrowse.TabIndex = 55;
+            this.cmdSkapMappBrowse.Text = "Utforska";
+            this.cmdSkapMappBrowse.UseVisualStyleBackColor = true;
+            this.cmdSkapMappBrowse.Click += new System.EventHandler(this.cmdSkapMappBrowse_Click);
+            // 
+            // txtSkapMapp
+            // 
+            this.txtSkapMapp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSkapMapp.Location = new System.Drawing.Point(19, 163);
+            this.txtSkapMapp.Name = "txtSkapMapp";
+            this.txtSkapMapp.ReadOnly = true;
+            this.txtSkapMapp.Size = new System.Drawing.Size(377, 20);
+            this.txtSkapMapp.TabIndex = 56;
+            this.txtSkapMapp.TabStop = false;
+            this.txtSkapMapp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // SettingsDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 295);
+            this.ClientSize = new System.Drawing.Size(702, 329);
             this.Controls.Add(this.cbBackupOnStart);
             this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.laVerksamhet);
@@ -295,5 +343,9 @@
         private System.Windows.Forms.Button cmdPdfClear;
         private System.Windows.Forms.Button cmdCancel;
         private System.Windows.Forms.CheckBox cbBackupOnStart;
+        private System.Windows.Forms.Button cmdSkapMappClear;
+        private System.Windows.Forms.Label laSkapMapp;
+        private System.Windows.Forms.Button cmdSkapMappBrowse;
+        private System.Windows.Forms.TextBox txtSkapMapp;
     }
 }

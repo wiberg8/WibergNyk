@@ -63,6 +63,7 @@
             this.tspNyNyckel = new System.Windows.Forms.ToolStripMenuItem();
             this.tspNyPerson = new System.Windows.Forms.ToolStripMenuItem();
             this.cmdKvittens = new System.Windows.Forms.Button();
+            this.tspSkapHantering = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgNycklar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPersoner)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -355,7 +356,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tspInstallningar,
-            this.tspNy});
+            this.tspNy,
+            this.tspSkapHantering});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1019, 24);
@@ -383,7 +385,7 @@
             // 
             this.tspNyNyckel.Name = "tspNyNyckel";
             this.tspNyNyckel.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.tspNyNyckel.Size = new System.Drawing.Size(156, 22);
+            this.tspNyNyckel.Size = new System.Drawing.Size(180, 22);
             this.tspNyNyckel.Text = "Nyckel";
             this.tspNyNyckel.Click += new System.EventHandler(this.tspNyNyckel_Click);
             // 
@@ -391,7 +393,7 @@
             // 
             this.tspNyPerson.Name = "tspNyPerson";
             this.tspNyPerson.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F2)));
-            this.tspNyPerson.Size = new System.Drawing.Size(156, 22);
+            this.tspNyPerson.Size = new System.Drawing.Size(180, 22);
             this.tspNyPerson.Text = "Person";
             this.tspNyPerson.Click += new System.EventHandler(this.tspNyPerson_Click);
             // 
@@ -405,6 +407,13 @@
             this.cmdKvittens.UseVisualStyleBackColor = true;
             this.cmdKvittens.Visible = false;
             this.cmdKvittens.Click += new System.EventHandler(this.cmdKvittens_Click);
+            // 
+            // tspSkapHantering
+            // 
+            this.tspSkapHantering.Name = "tspSkapHantering";
+            this.tspSkapHantering.Size = new System.Drawing.Size(98, 20);
+            this.tspSkapHantering.Text = "Skåp hantering";
+            this.tspSkapHantering.Click += new System.EventHandler(this.tspSkapHantering_Click);
             // 
             // frmMain
             // 
@@ -480,5 +489,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmAnstalldSom;
         private System.Windows.Forms.ToolStripMenuItem tspInstallningar;
         private System.Windows.Forms.Button cmdKvittens;
+        private System.Windows.Forms.ToolStripMenuItem tspSkapHantering;
     }
 }
