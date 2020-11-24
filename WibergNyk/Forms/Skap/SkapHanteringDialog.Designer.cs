@@ -31,6 +31,7 @@
             this.cmdCancel = new System.Windows.Forms.Button();
             this.laKlassSelect = new System.Windows.Forms.Label();
             this.cbKlassSelect = new System.Windows.Forms.ComboBox();
+            this.cmdImportSkapFil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdCancel
@@ -61,11 +62,23 @@
             this.cbKlassSelect.Size = new System.Drawing.Size(143, 21);
             this.cbKlassSelect.TabIndex = 58;
             // 
+            // cmdImportSkapFil
+            // 
+            this.cmdImportSkapFil.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cmdImportSkapFil.Location = new System.Drawing.Point(189, 36);
+            this.cmdImportSkapFil.Name = "cmdImportSkapFil";
+            this.cmdImportSkapFil.Size = new System.Drawing.Size(122, 25);
+            this.cmdImportSkapFil.TabIndex = 59;
+            this.cmdImportSkapFil.Text = "Importera skåp fil";
+            this.cmdImportSkapFil.UseVisualStyleBackColor = true;
+            this.cmdImportSkapFil.Click += new System.EventHandler(this.cmdImportSkapFil_Click);
+            // 
             // SkapHanteringDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 387);
+            this.Controls.Add(this.cmdImportSkapFil);
             this.Controls.Add(this.cbKlassSelect);
             this.Controls.Add(this.laKlassSelect);
             this.Controls.Add(this.cmdCancel);
@@ -84,5 +97,6 @@
         private System.Windows.Forms.Button cmdCancel;
         private System.Windows.Forms.Label laKlassSelect;
         private System.Windows.Forms.ComboBox cbKlassSelect;
+        private System.Windows.Forms.Button cmdImportSkapFil;
     }
 }
