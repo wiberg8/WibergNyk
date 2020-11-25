@@ -41,23 +41,29 @@ namespace WibergNykLibary
                     Phrase ph2 = new Phrase("Person", new Font(Font.FontFamily.TIMES_ROMAN, 14f, Font.BOLD, BaseColor.BLACK));
                     Phrase ph3 = new Phrase("Underskrift", new Font(Font.FontFamily.TIMES_ROMAN, 14f, Font.BOLD, BaseColor.BLACK));
 
-                    PdfPCell cell = new PdfPCell(ph);
-                    cell.Colspan = 2;
-                    cell.HorizontalAlignment = 1;
-                    cell.VerticalAlignment = 1;
-                    cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                    PdfPCell cell = new PdfPCell(ph)
+                    {
+                        Colspan = 2,
+                        HorizontalAlignment = 1,
+                        VerticalAlignment = 1,
+                        BackgroundColor = BaseColor.LIGHT_GRAY
+                    };
 
-                    PdfPCell cell2 = new PdfPCell(ph2);
-                    cell2.Colspan = 2;
-                    cell2.HorizontalAlignment = 1;
-                    cell2.VerticalAlignment = 1;
-                    cell2.BackgroundColor = BaseColor.LIGHT_GRAY;
+                    PdfPCell cell2 = new PdfPCell(ph2)
+                    {
+                        Colspan = 2,
+                        HorizontalAlignment = 1,
+                        VerticalAlignment = 1,
+                        BackgroundColor = BaseColor.LIGHT_GRAY
+                    };
 
-                    PdfPCell cell3 = new PdfPCell(ph3);
-                    cell3.Colspan = 2;
-                    cell3.HorizontalAlignment = 1;
-                    cell3.VerticalAlignment = 1;
-                    cell3.BackgroundColor = BaseColor.LIGHT_GRAY;
+                    PdfPCell cell3 = new PdfPCell(ph3)
+                    {
+                        Colspan = 2,
+                        HorizontalAlignment = 1,
+                        VerticalAlignment = 1,
+                        BackgroundColor = BaseColor.LIGHT_GRAY
+                    };
 
                     table.AddCell(cell);
                     table2.AddCell(cell2);
