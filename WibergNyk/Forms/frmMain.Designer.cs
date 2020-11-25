@@ -63,7 +63,7 @@
             this.tspNyNyckel = new System.Windows.Forms.ToolStripMenuItem();
             this.tspNyPerson = new System.Windows.Forms.ToolStripMenuItem();
             this.cmdKvittens = new System.Windows.Forms.Button();
-            this.tspSkapHantering = new System.Windows.Forms.ToolStripMenuItem();
+            this.laVattenmarke = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgNycklar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPersoner)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -356,8 +356,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tspInstallningar,
-            this.tspNy,
-            this.tspSkapHantering});
+            this.tspNy});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1019, 24);
@@ -385,7 +384,7 @@
             // 
             this.tspNyNyckel.Name = "tspNyNyckel";
             this.tspNyNyckel.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.tspNyNyckel.Size = new System.Drawing.Size(180, 22);
+            this.tspNyNyckel.Size = new System.Drawing.Size(156, 22);
             this.tspNyNyckel.Text = "Nyckel";
             this.tspNyNyckel.Click += new System.EventHandler(this.tspNyNyckel_Click);
             // 
@@ -393,7 +392,7 @@
             // 
             this.tspNyPerson.Name = "tspNyPerson";
             this.tspNyPerson.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F2)));
-            this.tspNyPerson.Size = new System.Drawing.Size(180, 22);
+            this.tspNyPerson.Size = new System.Drawing.Size(156, 22);
             this.tspNyPerson.Text = "Person";
             this.tspNyPerson.Click += new System.EventHandler(this.tspNyPerson_Click);
             // 
@@ -408,18 +407,21 @@
             this.cmdKvittens.Visible = false;
             this.cmdKvittens.Click += new System.EventHandler(this.cmdKvittens_Click);
             // 
-            // tspSkapHantering
+            // laVattenmarke
             // 
-            this.tspSkapHantering.Name = "tspSkapHantering";
-            this.tspSkapHantering.Size = new System.Drawing.Size(98, 20);
-            this.tspSkapHantering.Text = "Skåp hantering";
-            this.tspSkapHantering.Click += new System.EventHandler(this.tspSkapHantering_Click);
+            this.laVattenmarke.AutoSize = true;
+            this.laVattenmarke.Location = new System.Drawing.Point(854, 30);
+            this.laVattenmarke.Name = "laVattenmarke";
+            this.laVattenmarke.Size = new System.Drawing.Size(148, 13);
+            this.laVattenmarke.TabIndex = 37;
+            this.laVattenmarke.Text = "@Copyright 2020 Jesper DW ";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 627);
+            this.Controls.Add(this.laVattenmarke);
             this.Controls.Add(this.cmdKvittens);
             this.Controls.Add(this.cmdRegistreraNyckel);
             this.Controls.Add(this.cmdAvregistreraNyckel);
@@ -489,6 +491,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmAnstalldSom;
         private System.Windows.Forms.ToolStripMenuItem tspInstallningar;
         private System.Windows.Forms.Button cmdKvittens;
-        private System.Windows.Forms.ToolStripMenuItem tspSkapHantering;
+        private System.Windows.Forms.Label laVattenmarke;
     }
 }

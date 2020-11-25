@@ -74,67 +74,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Nyckel\frmMain.cs">
+    <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Nyckel\frmMain.Designer.cs">
+    <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Nyckel\NewNyckel.cs">
+    <Compile Include="Forms\NewNyckel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Nyckel\NewNyckel.Designer.cs">
+    <Compile Include="Forms\NewNyckel.Designer.cs">
       <DependentUpon>NewNyckel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Nyckel\NewPerson.cs">
+    <Compile Include="Forms\NewPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Nyckel\NewPerson.Designer.cs">
+    <Compile Include="Forms\NewPerson.Designer.cs">
       <DependentUpon>NewPerson.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Skap\SkapHanteringDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Skap\SkapHanteringDialog.Designer.cs">
-      <DependentUpon>SkapHanteringDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\Shared\SettingsDialog.cs">
+    <Compile Include="Forms\SettingsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Shared\SettingsDialog.Designer.cs">
+    <Compile Include="Forms\SettingsDialog.Designer.cs">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Nyckel\SplashScreen.cs">
+    <Compile Include="Forms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Nyckel\SplashScreen.Designer.cs">
+    <Compile Include="Forms\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Nyckel\UpdateNyckel.cs">
+    <Compile Include="Forms\UpdateNyckel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Nyckel\UpdateNyckel.Designer.cs">
+    <Compile Include="Forms\UpdateNyckel.Designer.cs">
       <DependentUpon>UpdateNyckel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Nyckel\UpdatePerson.cs">
+    <Compile Include="Forms\UpdatePerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Nyckel\UpdatePerson.Designer.cs">
+    <Compile Include="Forms\UpdatePerson.Designer.cs">
       <DependentUpon>UpdatePerson.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Nyckel\frmMain.resx">
+    <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Nyckel\NewNyckel.resx">
+    <EmbeddedResource Include="Forms\NewNyckel.resx">
       <DependentUpon>NewNyckel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Nyckel\NewPerson.resx">
+    <EmbeddedResource Include="Forms\NewPerson.resx">
       <DependentUpon>NewPerson.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Skap\SkapHanteringDialog.resx">
-      <DependentUpon>SkapHanteringDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -146,16 +137,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Forms\Shared\SettingsDialog.resx">
+    <EmbeddedResource Include="Forms\SettingsDialog.resx">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Nyckel\SplashScreen.resx">
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Nyckel\UpdateNyckel.resx">
+    <EmbeddedResource Include="Forms\UpdateNyckel.resx">
       <DependentUpon>UpdateNyckel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Nyckel\UpdatePerson.resx">
+    <EmbeddedResource Include="Forms\UpdatePerson.resx">
       <DependentUpon>UpdatePerson.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

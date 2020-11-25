@@ -71,7 +71,6 @@
     <Compile Include="Enums.cs" />
     <Compile Include="GlobalConfig.cs" />
     <Compile Include="IO.cs" />
-    <Compile Include="Skap.cs" />
     <Compile Include="Nyckel.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
