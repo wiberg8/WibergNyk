@@ -290,7 +290,7 @@
             // 
             // cmdSearch
             // 
-            this.cmdSearch.Location = new System.Drawing.Point(256, 45);
+            this.cmdSearch.Location = new System.Drawing.Point(256, 46);
             this.cmdSearch.Name = "cmdSearch";
             this.cmdSearch.Size = new System.Drawing.Size(107, 25);
             this.cmdSearch.TabIndex = 21;
@@ -384,7 +384,7 @@
             // 
             this.tspNyNyckel.Name = "tspNyNyckel";
             this.tspNyNyckel.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.tspNyNyckel.Size = new System.Drawing.Size(156, 22);
+            this.tspNyNyckel.Size = new System.Drawing.Size(180, 22);
             this.tspNyNyckel.Text = "Nyckel";
             this.tspNyNyckel.Click += new System.EventHandler(this.tspNyNyckel_Click);
             // 
@@ -392,7 +392,7 @@
             // 
             this.tspNyPerson.Name = "tspNyPerson";
             this.tspNyPerson.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F2)));
-            this.tspNyPerson.Size = new System.Drawing.Size(156, 22);
+            this.tspNyPerson.Size = new System.Drawing.Size(180, 22);
             this.tspNyPerson.Text = "Person";
             this.tspNyPerson.Click += new System.EventHandler(this.tspNyPerson_Click);
             // 
@@ -410,11 +410,11 @@
             // laVattenmarke
             // 
             this.laVattenmarke.AutoSize = true;
-            this.laVattenmarke.Location = new System.Drawing.Point(854, 30);
+            this.laVattenmarke.Location = new System.Drawing.Point(791, 30);
             this.laVattenmarke.Name = "laVattenmarke";
-            this.laVattenmarke.Size = new System.Drawing.Size(148, 13);
+            this.laVattenmarke.Size = new System.Drawing.Size(209, 26);
             this.laVattenmarke.TabIndex = 37;
-            this.laVattenmarke.Text = "@Copyright 2020 Jesper DW ";
+            this.laVattenmarke.Text = "@Copyright 2020 Jesper Dahlberg Wiberg \r\nKontakt: jdw@affarer@gmail.com\r\n";
             // 
             // frmMain
             // 

@@ -116,7 +116,7 @@
             // 
             this.txtPersNr.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             this.txtPersNr.Location = new System.Drawing.Point(53, 152);
-            this.txtPersNr.Mask = "00000000-0000";
+            this.txtPersNr.Mask = "000000-0000";
             this.txtPersNr.Name = "txtPersNr";
             this.txtPersNr.Size = new System.Drawing.Size(93, 20);
             this.txtPersNr.TabIndex = 2;

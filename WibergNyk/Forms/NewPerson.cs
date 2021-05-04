@@ -51,11 +51,10 @@ namespace WibergNyk
         {
             if (!string.IsNullOrWhiteSpace(txtFornamn.Text))
             {
-                string persNr = string.Empty;
-                if (txtPersNr.MaskCompleted)
-                    persNr = txtPersNr.Text;
+                if (!txtPersNr.MaskCompleted)
+                    return;
                 //Kollar om persnr redan finns på en person i så fall returnerar han från metoden för att undvika  DialogResult.OK och Initiera AddPerson
-                if (DataAccess.ExistPerson(persNr))
+                if (DataAccess.ExistPerson(txtPersNr.Text))
                 {
                     MessageBox.Show("Personen finns redan");
                 }
@@ -65,7 +64,7 @@ namespace WibergNyk
                     {
                         Fornamn = txtFornamn.Text.Trim(),
                         Efternamn = txtEfternamn.Text.Trim(),
-                        PersNr = persNr,
+                        PersNr = txtPersNr.Text,
                         Telefon = txtTelefon.Text,
                         AnstalldSom = txtAnstalldSom.Text.Trim(),
                         Ovrigt = txtOvrigt.Text

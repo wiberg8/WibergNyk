@@ -11,6 +11,8 @@ namespace WibergNyk
 {
     static class Program
     {
+        private const string AppName = "WibergNyk";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -27,7 +29,7 @@ namespace WibergNyk
             }
             else
             {
-                MessageBox.Show("Applikationen kör redan", "WibergNyk");
+                MessageBox.Show("Applikationen kör redan", AppName);
             }
         }
 
