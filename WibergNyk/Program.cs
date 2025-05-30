@@ -22,6 +22,7 @@ namespace WibergNyk
             if (PriorProcess() is null)
             {
                 BackupDatabase();
+                //DataAccess.CreateDatabaseIfNotExists(Properties.Settings.Default.DatabasePath);
                 DBHandler.SetFile(Properties.Settings.Default.DatabasePath);
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);

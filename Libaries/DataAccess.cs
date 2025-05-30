@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SQLite;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +12,58 @@ namespace WibergNykLibary
 {
     public static class DataAccess
     {
+        public static void CreateDatabaseIfNotExists(string dbFilePath)
+        {
+            // Step 1: Create the database file if it does not exist
+            if (!File.Exists(dbFilePath))
+            {
+                SQLiteConnection.CreateFile(dbFilePath);
+            }
+
+            // Step 2: Build the SQLite connection string
+            string connectionString = $"Data Source={dbFilePath};Version=3;";
+
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+
+                // Step 3: Create personer table if it doesn't exist
+                string createPersonerTable = @"
+            CREATE TABLE IF NOT EXISTS personer (
+                Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                Fornamn TEXT,
+                Efternamn TEXT,
+                PersNr TEXT UNIQUE,
+                Telefon TEXT,
+                AnstalldSom TEXT,
+                Ovrigt TEXT
+            );";
+
+                // Step 4: Create nycklar table if it doesn't exist
+                string createNycklarTable = @"
+            CREATE TABLE IF NOT EXISTS nycklar (
+                Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                Typ TEXT,
+                Serie TEXT,
+                Nummer TEXT,
+                Ovrigt TEXT,
+                Status INTEGER NOT NULL DEFAULT 0,
+                PersoId INTEGER,
+                FOREIGN KEY (PersoId) REFERENCES personer(Id) ON DELETE SET NULL
+            );";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(createPersonerTable, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+
+                using (SQLiteCommand cmd = new SQLiteCommand(createNycklarTable, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
         public static List<Person> GetAllPersoner()
         {
             List<Person> tempPersonList = new List<Person>();
@@ -32,7 +86,7 @@ namespace WibergNykLibary
                 return PersonDataTableToList(DBHandler.DBDT);
             return new List<Person>();
         }
-       
+
         public static List<Nyckel> GetAllNycklar()
         {
             DBHandler.ExecQuery("SELECT * FROM nycklar ORDER BY Id ASC");
@@ -44,7 +98,7 @@ namespace WibergNykLibary
         public static List<Nyckel> GetSearchNycklar(string searchQuery)
         {
             List<Nyckel> tempNyckelList = new List<Nyckel>();
-            DBHandler.AddParam("@Search", "%"+searchQuery+"%");
+            DBHandler.AddParam("@Search", "%" + searchQuery + "%");
             DBHandler.ExecQuery
                 (
                     "SELECT * FROM nycklar " +
@@ -69,7 +123,7 @@ namespace WibergNykLibary
 
         public static void RegisterNyckelToPerson(Nyckel nyckel, Person person)
         {
-            DBHandler.AddParam("@Id",nyckel.ID);
+            DBHandler.AddParam("@Id", nyckel.ID);
             DBHandler.AddParam("@PersoId", person.ID);
             DBHandler.AddParam("@Status", NyckelStatus.UTE);
             DBHandler.ExecQuery("UPDATE nycklar SET PersoId=@PersoId,Status=@Status WHERE Id=@Id");
@@ -177,7 +231,7 @@ namespace WibergNykLibary
         private static List<Person> PersonDataTableToList(DataTable personTable)
         {
             List<Person> tempPersoner = new List<Person>();
-            foreach (DataRow row in DBHandler.DBDT.Rows)
+            foreach (DataRow row in personTable.Rows)
             {
                 if (int.TryParse(row["Id"].ToString(), out int parsedId))
                 {
