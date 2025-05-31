@@ -1,4 +1,4 @@
-## Licens
+## License
 Prylex
 Copyright (C) 2025  Jesper
 
